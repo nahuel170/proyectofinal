@@ -130,7 +130,7 @@ const createTurnos = async (req, res) => {
     const turno = await new Turnos(turno_data);
     let turnoGuardado = await turno.save();
 
-    return res.status(200).json({ success: true, turno: turnoGuardado });
+    return res.status(200).json({ data: 'turno creado exitosamente' });
   } catch (error) {
     console.log(error)
     res.status(500).json({

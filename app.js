@@ -1,9 +1,3 @@
-//ES5 = commonjs => 
-/* const express = require('express'); */
-
-//Con una extensión convertimos en ES5 a ES6 
-//ES6 = module => configurar el package.js para el module
-//import express from 'express';
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
@@ -13,8 +7,6 @@ const hbs = require('hbs');
 const app = express();  
 const userRoutes = require('./routes/userRoutes');
 const turnosRoutes = require('./routes/turnosRoutes');
-
-
 
 app.use(cors());
 app.use(morgan('dev'));
@@ -26,22 +18,14 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/user', userRoutes);
 app.use('/turnos', turnosRoutes);
 
-
-
-//Configuración de handlebars
-//1. Seteamos el motor de plantillas
 app.set('view engine', 'hbs');
 
-//2. Seteamos la ruta de las plantillas
 app.set('views', path.join(__dirname, '/views'));
 
-//3. Seteamos la ruta de los parciales
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
-
 
 app.get('/', (req, res) => {
     res.render('registro');
 });
-
 
 module.exports = app;

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">ENCANTADA NAILS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">salir</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1 class=" text-center mt-5">
+    turnos programados
+</h1>
+
+<div class="container d-flex m-5">
+
+    {{#each turnos}}
+
+        <div class="card m-3" style="width: 22rem;">
+            <img src={{imagen}}  alt="producto para la venta">
+            <div class="card-body">
+                <h5 class="card-title">{{ servicio }}</h5>
+                <p class="card-text">{{ fecha }}</p>
+                <p class="card-text">{{ hora }}</p>
+                <form action="/turnos/eliminar/{{ _id }}" method="post">
+                    <button class="btn btn-danger">
+                        Eliminar turno
+                    </button>
+                </form>
+                <form action="/turnos/actualizar/{{ _id }}" method="post">
+                    <button class="btn btn-warning">
+                        Actualizar turno
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    {{/each}}
+
+</div>

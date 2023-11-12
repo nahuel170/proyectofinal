@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/imagenes/fondos/fondo2.jpg);
+    background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+   text-align: center;
+    }
+nav{height: 30%;
+        width: 100%;
+       border: 1px solid #000;
+       margin : auto;
+       padding: 20px;
+       background: #000000da ;
+     }
+p{
+            padding: 10px;
+            margin: 10px;
+    }
+main{
+    display:flex;
+    justify-content: center;
+}
+
+#izquierda{margin-right: auto;
+            font-size: 30px;
+            color: rgba(0, 195, 255, 0.801);
+    }
+.navegador{
+                display: flex;
+                flex-direction: row;  
+                justify-content: end;
+    }            
+li{
+    list-style: none;
+    margin: 10px;
+    padding: 20px;
+   
+}
+footer{
+    margin-top: 10%;
+     height: 10%;
+     width: 100%;
+     color: rgba(0, 0, 0, 0.623);
+      text-align: center;
+     padding: 10px;
+     border: 1px solid #000;;                                                   
+   }

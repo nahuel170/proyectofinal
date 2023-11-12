@@ -1,0 +1,31 @@
+<h1 class=" text-center mt-5" style="color: green;">
+    turno actualizado
+</h1>
+
+{{!-- <div class="m-4">
+    {{ id }}
+</div> --}}
+
+<div class="m-4">
+    {{ actualizar }}
+</div>
+
+
+<div class="card mb-3" style="max-width: 1200px; max-height:800px">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <img src={{ actualizar.imagen }} class="img-fluid rounded-start" alt="Detalle del produto actualizado">
+        </div>
+        <div class="col-md-6">
+            <div class="card-body">
+                <h2 class="card-title">{{ actualizar.servicio}}</h2>
+                <p class="card-text">{{ actualizar.nombre}}</p>
+                <p class="card-text">{{ actualizar.apellido}}</p>
+                <p class="card-text">{{ actualizar.telefono}}</p>
+                <p class="card-text">{{ actualizar.email}}</p>
+                <p class="card-text">{{ actualizar.fecha}}</p>
+                <p class="card-text">{{ actualizar.hora}}</p>
+            </div>
+        </div>
+    </div>
+</div>
